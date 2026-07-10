@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 From version 1.1.0 onwards this file follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) conventions.
 Older entries below are preserved as originally written.
 
+## [1.1.1] - 2026-07-10
+
+### Fixed
+
+- `WifiAuthMode` now includes `WPA3_PSK` (6) and `WPA2_WPA3_PSK` (7), matching
+  ESP-IDF v5's `wifi_constants.proto`. Previously these decoded as the unknown-
+  enum default `Open`, so WPA3 and WPA2/WPA3-mixed access points were reported
+  as open networks (`WifiAP.private == false`).
+
 ## [1.1.0] - 2026-04-18
 
 ### Added
